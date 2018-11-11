@@ -102,7 +102,6 @@ int main()
 		else {
 		}
 
-		//cout << answer1;
 	} while (answer1 != 0);
 
 	myfile.close();
