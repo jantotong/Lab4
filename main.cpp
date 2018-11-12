@@ -13,10 +13,12 @@ int main()
 	ofstream myfile;
 	myfile.open("Output.txt");
 
-	array<string> String(stsize);
+	array<int> String(stsize);
 	array<int> Int(intsize);
 	array<char> Char(chsize);
 	array<double> Doub(dobsize);
+
+
 
 	do {
 		cout << "Enter '1' for string, '2' for int, '3' for char, '4' for double" << endl << "Press 0 to quit" << endl;
@@ -31,20 +33,16 @@ int main()
 				stsize = 32;
 			}
 			cout << "Enter value of array: " << endl;
-			string temp[32];
+
 			for (int i = 0; i < stsize; i++) {
 				string value = "";
 				cin >> value;
-				String.setArray(i, value);
+				String.setArray(i, stoi(value));
 				myfile << String.myarray[i] << endl;
-				temp[i] = String.myarray[i];
 			}
-			/*
-			
-			String.InsertionSort(temp, stsize);
-			for (int i = 0; i < stsize; i++) {
-				String.myarray[i] = temp[i];
-			}
+
+			String.InsertionSort(String.myarray, stsize);
+
 
 			myfile << "Recursive Insertion Sort: \n";
 			cout << "Recursive Insertion Sort: " << endl;
@@ -53,8 +51,8 @@ int main()
 				myfile << String.myarray[i] << endl;
 			}
 			
-			String.QuickSort(temp, String.myarray[0], String.myarray[intsize-1]);
-
+			String.QuickSort(String.myarray, String.myarray[0], String.myarray[intsize-1]);
+			
 			myfile << "Recursive Quick Sort: \n";
 			cout << "Recursive Quick Sort: \n";
 
@@ -62,8 +60,8 @@ int main()
 				cout << String.myarray[i] << endl;
 				myfile << String.myarray[i] << endl;
 			}
-
-			String.MergeSort(temp, 0, chsize - 1);
+			
+			String.MergeSort(String.myarray, 0, chsize - 1);
 
 			myfile << "Recursive Merge Sort: \n";
 			cout << "Recursive Merge Sort: \n";
@@ -72,8 +70,6 @@ int main()
 				cout << String.myarray[i] << endl;
 				myfile << String.myarray[i] << endl;
 			}
-			*/
-			
 		}
 
 		else if (answer1 == 2) {
