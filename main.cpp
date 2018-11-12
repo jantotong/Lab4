@@ -53,7 +53,7 @@ int main()
 				myfile << String.myarray[i] << endl;
 			}
 			
-			String.quickSort(temp, String.myarray[0], String.myarray[intsize-1]);
+			String.QuickSort(temp, String.myarray[0], String.myarray[intsize-1]);
 
 			myfile << "Recursive Quick Sort: \n";
 			cout << "Recursive Quick Sort: \n";
@@ -63,7 +63,7 @@ int main()
 				myfile << String.myarray[i] << endl;
 			}
 
-			String.mergeSort(temp, 0, chsize - 1);
+			String.MergeSort(temp, 0, chsize - 1);
 
 			myfile << "Recursive Merge Sort: \n";
 			cout << "Recursive Merge Sort: \n";
@@ -108,7 +108,7 @@ int main()
 				myfile << Int.myarray[i] << endl;
 			}
 			
-			Int.quickSort(temp, Int.myarray[0], Int.myarray[intsize-1]);
+			Int.QuickSort(temp, Int.myarray[0], Int.myarray[intsize-1]);
 
 			myfile << "Recursive Quick Sort: \n";
 			cout << "Recursive Quick Sort: \n";
@@ -118,7 +118,7 @@ int main()
 				myfile << Int.myarray[i] << endl;
 			}
 
-			Int.mergeSort( temp, 0, intsize - 1);
+			Int.MergeSort( temp, 0, intsize - 1);
 
 			myfile << "Recursive Merge Sort: \n";
 			cout << "Recursive Merge Sort: \n";
@@ -159,7 +159,7 @@ int main()
 				myfile << Char.myarray[i] << endl;
 			}
 
-			Char.quickSort(temp, Char.myarray[0], Char.myarray[chsize - 1]);
+			Char.QuickSort(temp, Char.myarray[0], Char.myarray[chsize - 1]);
 
 			myfile << "Recursive Quick Sort: \n";
 			cout << "Recursive Quick Sort: \n";
@@ -169,7 +169,7 @@ int main()
 				myfile << Char.myarray[i] << endl;
 			}
 
-			Char.mergeSort(temp, 0, chsize - 1);
+			Char.MergeSort(temp, 0, chsize - 1);
 
 			myfile << "Recursive Merge Sort: \n";
 			cout << "Recursive Merge Sort: \n";
@@ -210,7 +210,7 @@ int main()
 				myfile << Doub.myarray[i] << endl;
 			}
 
-			Doub.quickSort(temp, Doub.myarray[0], Doub.myarray[dobsize - 1]);
+			Doub.QuickSort(temp, Doub.myarray[0], Doub.myarray[dobsize - 1]);
 
 			myfile << "Recursive Quick Sort: \n";
 			cout << "Recursive Quick Sort: \n";
@@ -220,7 +220,7 @@ int main()
 				myfile << Doub.myarray[i] << endl;
 			}
 
-			Doub.mergeSort(temp, 0, dobsize - 1);
+			Doub.MergeSort(temp, 0, dobsize - 1);
 
 			myfile << "Recursive Merge Sort: \n";
 			cout << "Recursive Merge Sort: \n";
