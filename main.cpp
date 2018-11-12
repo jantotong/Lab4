@@ -31,13 +31,49 @@ int main()
 				stsize = 32;
 			}
 			cout << "Enter value of array: " << endl;
-			myfile << "Input Value: \n";
+			string temp[32];
 			for (int i = 0; i < stsize; i++) {
-				string value="";
+				string value = "";
 				cin >> value;
 				String.setArray(i, value);
 				myfile << String.myarray[i] << endl;
+				temp[i] = String.myarray[i];
 			}
+			/*
+			
+			String.InsertionSort(temp, stsize);
+			for (int i = 0; i < stsize; i++) {
+				String.myarray[i] = temp[i];
+			}
+
+			myfile << "Recursive Insertion Sort: \n";
+			cout << "Recursive Insertion Sort: " << endl;
+			for (int i = stsize - 1; i >= 0; i--) {
+				cout << String.myarray[i] << endl;
+				myfile << String.myarray[i] << endl;
+			}
+			
+			String.quickSort(temp, String.myarray[0], String.myarray[intsize-1]);
+
+			myfile << "Recursive Quick Sort: \n";
+			cout << "Recursive Quick Sort: \n";
+
+			for (int i = stsize - 1; i >= 0; i--) {
+				cout << String.myarray[i] << endl;
+				myfile << String.myarray[i] << endl;
+			}
+
+			String.mergeSort(temp, 0, chsize - 1);
+
+			myfile << "Recursive Merge Sort: \n";
+			cout << "Recursive Merge Sort: \n";
+
+			for (int i = stsize - 1; i >= 0; i--) {
+				cout << String.myarray[i] << endl;
+				myfile << String.myarray[i] << endl;
+			}
+			*/
+			
 		}
 
 		else if (answer1 == 2) {
@@ -51,13 +87,46 @@ int main()
 
 			cout << "Enter value of array: " << endl;
 			myfile << "Input Value: \n";
+			int temp[32];
 			for (int i = 0; i < intsize; i++) {
 				int value = 0;
 				cin >> value;
 				Int.setArray(i, value);
 				myfile << Int.myarray[i] << endl;
+				temp[i] = Int.myarray[i];
+			}
+			Int.InsertionSort(temp, intsize);
+
+			for (int i = 0; i < intsize; i++) {
+				Int.myarray[i] = temp[i];
 			}
 
+			myfile << "Recursive Insertion Sort: \n";
+			cout << "Recursive Insertion Sort: " << endl;
+			for (int i = intsize-1; i >= 0; i--) {
+				cout << Int.myarray[i] << endl;
+				myfile << Int.myarray[i] << endl;
+			}
+			
+			Int.quickSort(temp, Int.myarray[0], Int.myarray[intsize-1]);
+
+			myfile << "Recursive Quick Sort: \n";
+			cout << "Recursive Quick Sort: \n";
+
+			for (int i = intsize-1; i >= 0; i--) {
+				cout << Int.myarray[i] << endl;
+				myfile << Int.myarray[i] << endl;
+			}
+
+			Int.mergeSort( temp, 0, intsize - 1);
+
+			myfile << "Recursive Merge Sort: \n";
+			cout << "Recursive Merge Sort: \n";
+
+			for (int i = intsize - 1; i >= 0; i--) {
+				cout << Int.myarray[i] << endl;
+				myfile << Int.myarray[i] << endl;
+			}
 		}
 
 		else if (answer1 == 3) {
@@ -69,17 +138,50 @@ int main()
 			}
 			cout << "Enter value of array: " << endl;
 			myfile << "Input Value: \n";
+			char temp [32];
 			for (int i = 0; i < chsize; i++) {
 				char value = 0;
 				cin >> value;
 				Char.setArray(i, value);
 				myfile << Char.myarray[i] << endl;
+				temp[i] = Char.myarray[i];
+			}
+			Char.InsertionSort(temp, chsize);
+
+			for (int i = chsize - 1; i >= 0; i--) {
+				Char.myarray[i] = temp[i];
+			}
+
+			myfile << "Recursive Insertion Sort: \n";
+			cout << "Recursive Insertion Sort: " << endl;
+			for (int i = chsize - 1; i >= 0; i--) {
+				cout << Char.myarray[i] << endl;
+				myfile << Char.myarray[i] << endl;
+			}
+
+			Char.quickSort(temp, Char.myarray[0], Char.myarray[chsize - 1]);
+
+			myfile << "Recursive Quick Sort: \n";
+			cout << "Recursive Quick Sort: \n";
+
+			for (int i = 0; i < chsize; i++) {
+				cout << Char.myarray[i] << endl;
+				myfile << Char.myarray[i] << endl;
+			}
+
+			Char.mergeSort(temp, 0, chsize - 1);
+
+			myfile << "Recursive Merge Sort: \n";
+			cout << "Recursive Merge Sort: \n";
+
+			for (int i = chsize - 1; i >= 0; i--) {
+				cout << Char.myarray[i] << endl;
+				myfile << Char.myarray[i] << endl;
 			}
 		}
 
-		if (answer1 == 4) {
+		else if (answer1 == 4) {
 			cout << "Enter amount of double array:" << endl;
-			cin >> dobsize;
 			cin >> dobsize;
 			if (dobsize >= 32) {
 				cout << "Max size is 32. Setting to 32" << endl;
@@ -87,10 +189,44 @@ int main()
 			}
 			cout << "Enter value of array: " << endl;
 			myfile << "Input Value: \n";
+			double temp[32];
 			for (int i = 0; i < dobsize; i++) {
 				double value = 0;
 				cin >> value;
 				Doub.setArray(i, value);
+				myfile << Doub.myarray[i] << endl;
+				temp[i] = Doub.myarray[i];
+			}
+			Doub.InsertionSort(temp, dobsize);
+
+			for (int i = 0; i < dobsize; i++) {
+				Doub.myarray[i] = temp[i];
+			}
+
+			myfile << "Recursive Insertion Sort: \n";
+			cout << "Recursive Insertion Sort: " << endl;
+			for (int i = dobsize - 1; i >= 0; i--) {
+				cout << Doub.myarray[i] << endl;
+				myfile << Doub.myarray[i] << endl;
+			}
+
+			Doub.quickSort(temp, Doub.myarray[0], Doub.myarray[dobsize - 1]);
+
+			myfile << "Recursive Quick Sort: \n";
+			cout << "Recursive Quick Sort: \n";
+
+			for (int i = dobsize - 1; i >= 0; i--) {
+				cout << Doub.myarray[i] << endl;
+				myfile << Doub.myarray[i] << endl;
+			}
+
+			Doub.mergeSort(temp, 0, dobsize - 1);
+
+			myfile << "Recursive Merge Sort: \n";
+			cout << "Recursive Merge Sort: \n";
+
+			for (int i = dobsize - 1; i >= 0; i--) {
+				cout << Doub.myarray[i] << endl;
 				myfile << Doub.myarray[i] << endl;
 			}
 		}
@@ -105,6 +241,5 @@ int main()
 	} while (answer1 != 0);
 
 	myfile.close();
-	system("pause");
 	return 0;
 }
