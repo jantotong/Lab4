@@ -67,41 +67,34 @@ public:
 		return (i + 1);
 	}
 
-	void quickSort(T arr[], T low, T high)
+	void QuickSort(T arr[], T low, T high)
 	{
 		if (low < high)
 		{
 
 			T parttemp = partition(arr, low, high);
-			quickSort(arr, low, parttemp - 1);
-			quickSort(arr, parttemp + 1, high);
+			QuickSort(arr, low, parttemp - 1);
+			QuickSort(arr, parttemp + 1, high);
 		}
 	}
 
-
-// Merges two subarrays of arr[]. 
-// First subarray is arr[l..m] 
-// Second subarray is arr[m+1..r] 
 	void merge(T arr[], int l, int m, int r)
 	{
 		int i, j, k;
 		int n1 = m - l + 1;
 		int n2 = r - m;
 
-		/* create temp arrays */
 		 T L[32];
 		 T R[32];
 
-		/* Copy data to temp arrays L[] and R[] */
 		for (i = 0; i < n1; i++)
 			L[i] = arr[l + i];
 		for (j = 0; j < n2; j++)
 			R[j] = arr[m + 1 + j];
 
-		/* Merge the temp arrays back into arr[l..r]*/
-		i = 0; // Initial index of first subarray 
-		j = 0; // Initial index of second subarray 
-		k = l; // Initial index of merged subarray 
+		i = 0; 
+		j = 0;
+		k = l;  
 		while (i < n1 && j < n2)
 		{
 			if (L[i] <= R[j])
@@ -117,8 +110,6 @@ public:
 			k++;
 		}
 
-		/* Copy the remaining elements of L[], if there
-		   are any */
 		while (i < n1)
 		{
 			arr[k] = L[i];
@@ -126,8 +117,6 @@ public:
 			k++;
 		}
 
-		/* Copy the remaining elements of R[], if there
-		   are any */
 		while (j < n2)
 		{
 			arr[k] = R[j];
@@ -136,19 +125,14 @@ public:
 		}
 	}
 
-	/* l is for left index and r is right index of the
-	   sub-array of arr to be sorted */
-	void mergeSort(T arr[], int l, int r)
+	void MergeSort(T arr[], int l, int r)
 	{
 		if (l < r)
 		{
-			// Same as (l+r)/2, but avoids overflow for 
-			// large l and h 
 			int m = l + (r - l) / 2;
 
-			// Sort first and second halves 
-			mergeSort(arr, l, m);
-			mergeSort(arr, m + 1, r);
+			MergeSort(arr, l, m);
+			MergeSort(arr, m + 1, r);
 
 			merge(arr, l, m, r);
 		}
